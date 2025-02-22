@@ -1,6 +1,8 @@
 package com.example.foodapp.Activity.Splash
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,17 +26,24 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.foodapp.MainActivity
 import com.example.foodapp.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContent {
+            SplashScreen(onGetStartedClick = {
+                startActivity(Intent(this, MainActivity::class.java))
+            })
+        }
     }
 }
 
 @Composable
 @Preview
-fun SplashScreen(){
+fun SplashScreen(onGetStartedClick:()-> Unit={}){
     Column (modifier = Modifier
         .fillMaxSize()
         .background(color = colorResource(R.color.darkBrown))
@@ -91,5 +100,9 @@ fun SplashScreen(){
             modifier = Modifier
                 .padding(16.dp)
         )
+
+        GetStartedButton(onClick = onGetStartedClick,
+            modifier = Modifier
+                .padding(top = 16.dp))
     }
 }
