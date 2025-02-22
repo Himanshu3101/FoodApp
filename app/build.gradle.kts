@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.foodapp"
-    compileSdk = 34
+   compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.foodapp"
@@ -54,6 +54,9 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.firebase.database)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,5 +76,5 @@ dependencies {
 
     implementation (libs.androidx.constraintlayout.compose)
 
-//    implementation ("androidx.compose.foundation:foundation:1.7.8")
+    implementation (libs.androidx.foundation)
 }

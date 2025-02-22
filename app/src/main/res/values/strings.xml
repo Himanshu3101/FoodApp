@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FoodApp</string>
+    <string name="splashSubttitle">Shared and delightful, for an easy and enjoyable food ordering experience.</string>
 </resources>
