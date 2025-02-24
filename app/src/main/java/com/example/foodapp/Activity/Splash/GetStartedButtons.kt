@@ -44,7 +44,7 @@ fun GetStartedButton(onClick: () -> Unit = {}, modifier: Modifier = Modifier) {
         }
 
         Button(
-            onClick = {},
+            onClick = {onClick()},
             colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.orange)),
             shape = RoundedCornerShape(50.dp),
             modifier = modifier
