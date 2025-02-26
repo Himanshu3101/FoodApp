@@ -2,6 +2,7 @@ package com.example.foodapp.Activity.Splash
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -28,7 +29,10 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.foodapp.Activity.BaseActivity
 import com.example.foodapp.Activity.Dashboard.MainActivity
 import com.example.foodapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

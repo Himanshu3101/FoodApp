@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -39,7 +40,7 @@ android {
         compose = true
     }
     composeOptions{
-        kotlinCompilerExtensionVersion="1.5.4"
+        kotlinCompilerExtensionVersion= libs.versions.composeCompiler.get()
     }
 }
 
@@ -77,4 +78,9 @@ dependencies {
     implementation (libs.androidx.constraintlayout.compose)
 
     implementation (libs.androidx.foundation)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
 }
