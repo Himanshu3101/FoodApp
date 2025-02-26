@@ -59,6 +59,9 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()){
             item {
                 Banner(banners.toMutableStateList(), showBannerLoading)
             }
+            item {
+                Search()
+            }
         }
     }
 }
