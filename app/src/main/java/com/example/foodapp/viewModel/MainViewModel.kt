@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.foodapp.Domain.BannerModel
 import com.example.foodapp.Domain.CategoryModel
+import com.example.foodapp.Domain.FoodModel
 import com.example.foodapp.Repository.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
@@ -20,6 +21,10 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
 
     private val _categoryState = MutableStateFlow<List<CategoryModel>>(emptyList())
     val categoryState: Flow<List<CategoryModel>> = _categoryState
+
+    private val _loadFilter = MutableStateFlow<List<FoodModel>>(emptyList())
+    val loadFilter: Flow<List<FoodModel>> = _loadFilter
+
 
 
     init {
@@ -40,6 +45,14 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
             repository.loadCategory()
                 .catch { e -> e.printStackTrace() }
                 .collect{category -> _categoryState.value = category}
+        }
+    }
+
+    fun loadFilter(id:String) {
+        viewModelScope.launch {
+            repository.loadFilter(id)
+                .catch { e -> e.printStackTrace() }
+                .collect{loadFilter -> _loadFilter.value = loadFilter}
         }
     }
 

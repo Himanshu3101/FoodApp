@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -42,6 +43,7 @@ android {
     composeOptions{
         kotlinCompilerExtensionVersion= libs.versions.composeCompiler.get()
     }
+
 }
 
 dependencies {
@@ -66,6 +68,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+
+
     implementation(libs.coil)
     implementation(libs.coil.compose)
 
@@ -78,6 +82,9 @@ dependencies {
     implementation (libs.androidx.constraintlayout.compose)
 
     implementation (libs.androidx.foundation)
+
+//    KotlinX.Serialization
+    implementation(libs.kotlinx.serialization.json)
 
     //Hilt
     implementation(libs.hilt.android)
