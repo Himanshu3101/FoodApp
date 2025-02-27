@@ -37,14 +37,19 @@ class MainActivity : BaseActivity() {
 fun MainScreen(viewModel: MainViewModel = hiltViewModel()){
     Log.d("Debug", "MainScreen Composable is called")
 
-//    val banners = remember { mutableStateListOf<BannerModel>() }
 
     val banners by viewModel.bannerState.collectAsStateWithLifecycle(initialValue = emptyList())
+    val categories by viewModel.categoryState.collectAsStateWithLifecycle(initialValue = emptyList())
 
     var showBannerLoading by remember { mutableStateOf(true) }
+    var showCategoryLoading by remember { mutableStateOf(true) }
 
     LaunchedEffect(banners) {
        showBannerLoading = banners.isEmpty()
+    }
+
+    LaunchedEffect(categories){
+        showCategoryLoading = categories.isEmpty()
     }
 
     Scaffold (bottomBar = { MyBottomBar() }){ paddingValues ->
@@ -61,6 +66,9 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()){
             }
             item {
                 Search()
+            }
+            item{
+                CategorySection(categories.toMutableStateList(), showCategoryLoading)
             }
         }
     }
