@@ -1,5 +1,6 @@
 package com.example.foodapp.Activity.Dashboard
 
+import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -18,11 +19,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.example.foodapp.Activity.ItemsList.ItemsListsActivity
 import com.example.foodapp.Domain.CategoryModel
 import com.example.foodapp.R
 
@@ -31,6 +34,9 @@ fun CategorySection(
     categories: SnapshotStateList<CategoryModel>,
     showCategoryLoading: Boolean
 ) {
+
+    val context = LocalContext.current  // Get Context in Composable
+
     Text(
         text = "Choose Category",
         fontSize = 18.sp,
@@ -70,7 +76,13 @@ fun CategorySection(
                             modifier = Modifier
                                 .weight(1f)
                                 .padding(horizontal = 8.dp),
-                            onItemClick = {}
+                            onItemClick = {
+                                val intent = Intent(context, ItemsListsActivity::class.java).apply {
+                                    putExtra("id", categoryModel.Id.toString())
+                                    putExtra("title", categoryModel.Name)
+                                }
+                               context.startActivity(intent)
+                            }
                         )
                     }
                     if(row.size<3){

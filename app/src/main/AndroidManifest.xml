@@ -14,7 +14,7 @@
         android:theme="@style/Theme.FoodApp"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.ItemsList.ItemListsActivity"
+            android:name=".Activity.ItemsList.ItemsListsActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.BaseActivity"

@@ -9,6 +9,8 @@ import com.example.foodapp.Repository.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -23,7 +25,7 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
     val categoryState: Flow<List<CategoryModel>> = _categoryState
 
     private val _loadFilter = MutableStateFlow<List<FoodModel>>(emptyList())
-    val loadFilter: Flow<List<FoodModel>> = _loadFilter
+    val loadFilter: StateFlow<List<FoodModel>> = _loadFilter.asStateFlow()
 
 
 
@@ -55,5 +57,7 @@ class MainViewModel @Inject constructor(private val repository: MainRepository) 
                 .collect{loadFilter -> _loadFilter.value = loadFilter}
         }
     }
+
+
 
 }
