@@ -38,6 +38,7 @@ import com.example.foodapp.R
 fun ItemsList(items: List<FoodModel>){
     LazyColumn (modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)){
         itemsIndexed(items) { index, item ->
+
             Items(item = item, index = index)
         }
     }
