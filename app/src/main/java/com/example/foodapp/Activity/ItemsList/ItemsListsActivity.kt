@@ -118,7 +118,7 @@ private fun ItemsListScreen(
                 CircularProgressIndicator()
             }
         }else{
-
+            ItemsList(items)
         }
     }
 }
