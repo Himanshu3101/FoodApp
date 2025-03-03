@@ -1,9 +1,10 @@
 package com.example.foodapp.Activity.ItemsList
 
+
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.content.MediaType.Companion.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -30,8 +31,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.example.foodapp.Activity.Dashboard.DetailEachFood.DetailEachFoodActivity
 import com.example.foodapp.Domain.FoodModel
 import com.example.foodapp.R
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 
 @Composable
@@ -55,6 +59,12 @@ fun Items(item: FoodModel, index: Int) {
             .background(colorResource(R.color.grey), shape = RoundedCornerShape(10.dp))
             .wrapContentHeight()
             .clickable {
+
+                val json = Json.encodeToString(item) //For kotlinx.Serialization use here
+                val intent = Intent(context, DetailEachFoodActivity::class.java).apply {
+                    putExtra("object", json)
+                }
+                context.startActivity(intent)
 
             }
     ){

@@ -18,5 +18,5 @@ data class FoodModel(
     var TimeValue:Int = 0,
     var Title:String = "",
     var Calorie:Int = 0,
-    var numberinCar:Int = 0,
+    var numberInCart:Int = 0,
 )

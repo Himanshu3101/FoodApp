@@ -86,6 +86,9 @@ dependencies {
 //    KotlinX.Serialization
     implementation(libs.kotlinx.serialization.json)
 
+//  gson
+    implementation(libs.gson)
+
     //Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)

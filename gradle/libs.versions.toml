@@ -28,6 +28,7 @@ kotlin = "1.9.20"
 ksp = "1.9.22-1.0.16"
 composeCompiler = "1.5.4"
 kotlinxSerializationJson = "1.6.0"
+gson = "2.10.1"
 [libraries]
 
 
@@ -70,7 +71,8 @@ hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose  = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose"}
 
-
+#gson
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 
 kotlinx-serialization-json  = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson"}
 
@@ -78,9 +80,6 @@ kotlinx-serialization-json  = { group = "org.jetbrains.kotlinx", name = "kotlinx
 
 
 [plugins]
-
-
-
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
