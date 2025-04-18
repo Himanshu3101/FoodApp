@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.ItemsList
+package com.example.foodapp.ui.Activity.ItemsList
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -27,9 +27,9 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.foodapp.Activity.BaseActivity
+import com.example.foodapp.ui.Activity.BaseActivity
 import com.example.foodapp.R
-import com.example.foodapp.viewModel.MainViewModel
+import com.example.foodapp.ui.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -47,7 +47,7 @@ class ItemsListsActivity : BaseActivity() {
 
         setContent {
 
-            val viewModel:MainViewModel = hiltViewModel()
+            val viewModel: MainViewModel = hiltViewModel()
 
             ItemsListScreen(
                 title = title,

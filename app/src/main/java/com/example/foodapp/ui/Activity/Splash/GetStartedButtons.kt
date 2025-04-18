@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Splash
+package com.example.foodapp.ui.Activity.Splash
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Row

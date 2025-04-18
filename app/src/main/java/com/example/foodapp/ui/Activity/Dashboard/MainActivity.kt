@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Dashboard
+package com.example.foodapp.ui.Activity.Dashboard
 
 import android.os.Bundle
 import android.util.Log
@@ -18,8 +18,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
-import com.example.foodapp.Activity.BaseActivity
-import com.example.foodapp.viewModel.MainViewModel
+import com.example.foodapp.ui.Activity.BaseActivity
+import com.example.foodapp.ui.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

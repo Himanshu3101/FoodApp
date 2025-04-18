@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.ItemsList
+package com.example.foodapp.ui.Activity.ItemsList
 
 
 import android.content.Intent
@@ -31,7 +31,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.example.foodapp.Activity.Dashboard.DetailEachFood.DetailEachFoodActivity
+import com.example.foodapp.ui.Activity.Dashboard.DetailEachFood.DetailEachFoodActivity
 import com.example.foodapp.Domain.FoodModel
 import com.example.foodapp.R
 import kotlinx.serialization.encodeToString

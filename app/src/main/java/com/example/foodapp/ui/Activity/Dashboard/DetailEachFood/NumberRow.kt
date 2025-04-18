@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Dashboard.DetailEachFood
+package com.example.foodapp.ui.Activity.Dashboard.DetailEachFood
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

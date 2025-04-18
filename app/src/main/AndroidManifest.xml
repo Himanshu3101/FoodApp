@@ -14,16 +14,16 @@
         android:theme="@style/Theme.FoodApp"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.Dashboard.DetailEachFood.DetailEachFoodActivity"
+            android:name=".ui.Activity.Dashboard.DetailEachFood.DetailEachFoodActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ItemsList.ItemsListsActivity"
+            android:name=".ui.Activity.ItemsList.ItemsListsActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.BaseActivity"
+            android:name=".ui.Activity.BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.Splash.SplashActivity"
+            android:name=".ui.Activity.Splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.Dashboard.MainActivity"
+            android:name=".ui.Activity.Dashboard.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.FoodApp" />
     </application>

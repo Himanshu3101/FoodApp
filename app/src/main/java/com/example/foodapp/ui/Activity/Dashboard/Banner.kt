@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Dashboard
+package com.example.foodapp.ui.Activity.Dashboard
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.collectIsDraggedAsState

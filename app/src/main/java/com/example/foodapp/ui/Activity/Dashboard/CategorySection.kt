@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Dashboard
+package com.example.foodapp.ui.Activity.Dashboard
 
 import android.content.Intent
 import androidx.compose.foundation.background
@@ -25,7 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.example.foodapp.Activity.ItemsList.ItemsListsActivity
+import com.example.foodapp.ui.Activity.ItemsList.ItemsListsActivity
 import com.example.foodapp.Domain.CategoryModel
 import com.example.foodapp.R
 

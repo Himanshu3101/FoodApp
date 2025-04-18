@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Dashboard.DetailEachFood
+package com.example.foodapp.ui.Activity.Dashboard.DetailEachFood
 
 import androidx.compose.foundation.Image
 import androidx.compose.material3.Text

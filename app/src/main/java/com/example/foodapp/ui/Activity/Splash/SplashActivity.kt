@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Splash
+package com.example.foodapp.ui.Activity.Splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -26,8 +26,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.foodapp.Activity.BaseActivity
-import com.example.foodapp.Activity.Dashboard.MainActivity
+import com.example.foodapp.ui.Activity.BaseActivity
+import com.example.foodapp.ui.Activity.Dashboard.MainActivity
 import com.example.foodapp.R
 import dagger.hilt.android.AndroidEntryPoint
 

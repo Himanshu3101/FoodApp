@@ -1,4 +1,4 @@
-package com.example.foodapp.Activity.Dashboard.DetailEachFood
+package com.example.foodapp.ui.Activity.Dashboard.DetailEachFood
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.foodapp.Activity.BaseActivity
+import com.example.foodapp.ui.Activity.BaseActivity
 import com.example.foodapp.Domain.FoodModel
 import com.uilover.project2142.Helper.ManagmentCart
 import dagger.hilt.android.AndroidEntryPoint
